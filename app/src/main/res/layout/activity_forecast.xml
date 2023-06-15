@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cuaca"
+    tools:context=".ui.ForecastActivity">
+
+    <!--    searching part -->
+    <LinearLayout
+        android:id="@+id/fl_cuaca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/search"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/judul_forcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/artifika"
+        android:text="Perkiraan Cuaca Hari Ini"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    weather forecast -->
+    <LinearLayout
+        android:id="@+id/bagian1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/judul_forcast">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="55dp"
+            android:src="@drawable/cuaca" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuaca"
+            android:fontFamily="@font/artifika"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            />
+
+        <TextView
+            android:id="@+id/cuaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kondisi_cuaca"
+            android:layout_marginStart="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian1"/>
+
+    <!--    temperature -->
+    <LinearLayout
+        android:id="@+id/bagian2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="55dp"
+            android:src="@drawable/suhu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suhu"
+            android:fontFamily="@font/artifika"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            />
+
+        <TextView
+            android:id="@+id/suhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kondisi_suhu"
+            android:layout_marginStart="42dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian2"/>
+
+    <!--    humidity -->
+    <LinearLayout
+        android:id="@+id/bagian3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian2">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="55dp"
+            android:src="@drawable/kelembapan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kelembapan"
+            android:fontFamily="@font/artifika"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            />
+
+        <TextView
+            android:id="@+id/kelembapan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kondisi_lembap"
+            android:layout_marginStart="40dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian3"/>
+
+    <!--    windspeed -->
+    <LinearLayout
+        android:id="@+id/bagian4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian3">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="55dp"
+            android:src="@drawable/angin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/angin"
+            android:fontFamily="@font/artifika"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            />
+
+        <TextView
+            android:id="@+id/angin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kondisi_lembap"
+            android:layout_marginStart="35dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/bagian4"/>
+
+<!-- progressbar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

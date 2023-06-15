@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".ui.CropPredictionActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/NitrogenIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Nitrogen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PotassiumIdCrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TemperatureIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NitrogenIdCrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/HumidityIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureIdCrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PHIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="pH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HumidityIdCrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/RainfallIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Rainfall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PHIdCrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PhosporIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Phospor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PotassiumIdCrop"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Potassium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhosporIdCrop" />
+
+    <Button
+        android:id="@+id/buttonPrediksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Prediksi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RainfallIdCrop" />
+
+    <TextView
+        android:id="@+id/HasilPrediksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="120dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="-"
+        android:fontFamily="@font/artifika"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LabelPrediksi"
+        app:layout_constraintTop_toTopOf="@+id/LabelPrediksi" />
+
+    <TextView
+        android:id="@+id/LabelPrediksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/artifika"
+        android:text="Hasil Prediksi :"
+        app:layout_constraintEnd_toStartOf="@+id/HasilPrediksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPrediksi" />
+
+    <!-- progressbar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RainfallIdCrop"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

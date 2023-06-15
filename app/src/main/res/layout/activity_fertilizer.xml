@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".ui.FertilizerActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TemperatureId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:foregroundTint="#FFFFFF"
+        android:hint="Temperature"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/HumidityId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Humidity"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/MoistureId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Moisture"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HumidityId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/SoilTypeId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Soil Type"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MoistureId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/CropTypeId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Crop Type"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SoilTypeId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/NitrogenId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Nitrogen"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CropTypeId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PotassiumId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Potassium"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NitrogenId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PhosporId"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Phospor"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PotassiumId" />
+
+    <Button
+        android:id="@+id/PredictButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Prediksi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhosporId" />
+
+    <TextView
+        android:id="@+id/HasilPrediksi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="120dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="-"
+        android:fontFamily="@font/artifika"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/HasilPrediksi"
+        app:layout_constraintTop_toTopOf="@+id/HasilPrediksi" />
+
+    <TextView
+        android:id="@+id/HasilPrediksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/artifika"
+        android:text="Hasil Prediksi :"
+        app:layout_constraintEnd_toStartOf="@+id/HasilPrediksi2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PredictButton" />
+
+    <!-- progressbar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhosporId"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
