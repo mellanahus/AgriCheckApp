@@ -23,7 +23,7 @@ class CropPredictionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Identifikasi Penyakit Tanaman"
+        supportActionBar?.title = "Rekomendasi Tanaman"
 
         binding.buttonPrediksi.setOnClickListener {
 
