@@ -12,6 +12,21 @@ Features in the AgriCheck app:
 - Soil Prediction
 - Disease Prediction in Cotton
 
+ <p align="center">
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/splash_screen.jpg" alt="" width="120" />
+   <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/login.jpg" alt="" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/daftar.jpg" alt="github-small" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/home.jpg" alt="github-small" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/cuaca.jpg" alt="github-small" width="120" />
+</p>
+
+ <p align="center">
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/rekomendasi_tanaman.jpg" alt="github-small" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/prediksi%20tanah.jpg" alt="github-small" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/pemupukan.jpg" alt="github-small" width="120" />
+    <img src="https://github.com/mellanahus/Assets/blob/main/assets_agricheckapp/prediksi_kapas.jpg" alt="github-small" width="120" />
+ </p>
+
 ###### This application was created using Kotlin programming language in Android Studio. Implementing the API created by the Cloud Computing team using the retrofit library and several other libraries according to the needs of application development.
 
 **Together with Agricheck, advancing Indonesian agriculture**
